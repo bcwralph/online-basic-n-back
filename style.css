@@ -1,0 +1,242 @@
+div,button{
+  display:none;
+  visibility:hidden;
+
+  font-family: Verdana, sans-serif;
+  font-size: 16px;
+}
+body{
+  /*top right bottom left*/
+  /*padding: 40px 40px 0px 40px;*/
+  padding: 40px 300px 40px 300px;
+  background-color:#cccccc;
+}
+
+button{
+  /*top right bottom left*/
+  padding: 8px 12px 8px 12px;
+  text-transform:uppercase;
+}
+
+#uw-header{
+  text-align:center;
+  height:100px;
+  background-color:black;
+  outline:1px solid white;
+}
+
+#uw-logo{
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  max-width:100%;
+  max-height:100%;
+}
+
+#stim-container{
+  position:fixed;
+	top:50%;
+	left:50%;
+	margin:auto;
+	transform: translate(-50%, -50%);
+	font-size:62px;
+	color:black;
+}
+
+#vid-container{
+  z-index: 200;
+}
+
+iframe{
+  width:640;
+  height:480;
+
+  display:none;
+  visibility: hidden;
+
+  position:fixed;
+
+  top:20%;
+  left:50%;
+  margin-left: auto;
+  margin-right: auto;
+
+  transform: translate(-50%,-50%);
+  pointer-events: none;
+  border: 1px solid black;
+}
+
+table{
+  /*border:1px solid black;*/
+  border-spacing:10px;
+  border-collapse: separate;
+}
+
+th:nth-child(1){
+  text-align:right;
+  width:300px;
+  font-weight:normal;
+}
+
+th:nth-child(2){
+  width:500px;
+}
+
+th:nth-child(3){
+  text-align:left;
+  width:200px;
+  font-weight:normal;
+}
+
+/*
+input[type=range]{
+  -webkit-appearance: none;
+  width: 100%;
+  height: 10px;
+  background: black;
+  outline: none;
+  opacity: 0.7;
+  cursor:pointer;
+}
+*/
+/*
+input[type=range]::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    width:10px;
+    height:30px;
+    background: black;
+    cursor: pointer;
+}
+*/
+.not-clicked::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  height:0px;
+  width:0px;
+}
+.not-clicked::-moz-range-thumb{
+  -moz-appearance:none;
+  border:none;
+  height:0px;
+  width:0px;
+}
+.notclicked::-ms-thumb{
+  appearance: none;
+  border:none;
+  height:0px;
+  width:0px;
+}
+
+.clicked::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+  margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
+}
+
+.clicked::-moz-range-thumb{
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+  margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
+}
+
+.clicked::-ms-thumb{
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+  margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
+}
+
+span{
+  color: blue;
+  font-weight:bold;
+
+}
+
+
+/*FULL CSS to Style Range Inputs in All Browsers
+taken from : https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/
+*/
+input[type=radio]{
+  display:inline-block;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  margin: 18px 0;
+  width: 100%;
+}
+input[type=range]:focus {
+  outline: none;
+}
+
+/* Special styling for WebKit/Blink */
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #3071a9;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #367ebd;
+}
+
+/*Firefox specific*/
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #3071a9;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+
+/*IE specific*/
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #2a6495;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]::-ms-fill-upper {
+  background: #3071a9;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #3071a9;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #367ebd;
+}

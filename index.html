@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>title here</title>
+    <link rel='stylesheet' type='text/css' href='style.css'/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  </head>
+  <body>
+    <form id='sendtoPHP' method='post' action='server-side.php'>
+      <input type='hidden' name='put-studyid-here' id = 'put-studyid-here' value = ''/>
+      <input type='hidden' name='put-sscode-here' id = 'put-sscode-here' value = ''/>
+      <input type='hidden' name='put-data-here' id = 'put-data-here' value = ''/>
+    </form>
+
+    <div id='stim-container'></div>
+
+    <header id='uw-header'>
+      <img id='uw-logo' src='UniversityOfWaterloo_logo_horiz_rev_rgb.png'/>
+    </header>
+
+    <div id='info-consent-letter'>
+      <h2>Information and Consent Letter</h2>
+      <p><b>Project Title:</b> title here</p>
+      <p><b>Post-Doctoral Researchers:</b> </p>
+      <p><b>Faculty Researcher:</b></p>
+      <p>You are invited to participate in a research study being conducted by ...</p>
+      <p>As a participant in this study ...</p>
+      
+      <p><b>With full knowledge of all foregoing, I agree of my own free will, to participate in this study.</b></p>
+    </div>
+
+    <div id='decline-to-participate'>
+      <p>You have declined to participate at this time.</p>
+      <p>If you change your mind, simply reload this webpage.</p>
+    </div>
+
+    <div id='task-inst'></div>
+
+    <div id='practice-over'>
+      <p>The practice trials are now over.</p>
+      <p>When you are ready to begin the experiment, please click the 'Begin Task' button below.</p>
+    </div>
+
+    <div id='intermission'></div>
+
+    <div id='demographic-questionnaire'>
+      <h2>Demographics Questionnaire</h2>
+      <p>First, we would like to collect some simple demographic information. If you prefer not to respond, simply leave the question blank</p>
+      <p><b>1. Please indicate which gender you identify with:</b></p>
+      <label><input type='radio' name='rad-gender-answer' value='Male'/>Male</label>
+      <label><input type='radio' name='rad-gender-answer' value='Female'/>Female</label>
+      <label><input type='radio' name='rad-gender-answer' value='Other'/>Other</label>
+      <br>
+      <br>
+      <p><b>2. Please indicate your age: <span id='age-output'>Not Selected</span></b></p>
+      <p><i>(Click and drag the slider to indicate your response)</i></p>
+
+      <table>
+        <th>Age (In Years) 1</th>
+        <th><input id='age-slider' type="range" min="1" max="100" class="not-clicked"></th>
+        <th>100</th>
+      </table>
+      <br>
+    </div>
+
+
+    <button id='no-consent-btn' class='consent-btn'>I do not agree to participate</button>
+    <button id='yes-consent-btn' class='consent-btn'><b>I agree to participate</b></button>
+    <button id='inst-back-btn'>Back</button>
+    <button id='inst-next-btn'>Next</button>
+    <button id='save-resp-btn'>Save responses</button>
+    <button id='finish-btn'>Finish</button>
+
+    <div id='browser-not-supported'></div>
+    <div id='do-not-refresh'>
+      <br><p><b><i>Please be advised: Refreshing your browser will cause the task to reset. Please do not refresh your browser.</i></b></p>
+    </div>
+
+  <script type='text/javascript' language='javascript' src='task.js'></script>
+  </body>
+</html>
